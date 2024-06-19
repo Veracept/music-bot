@@ -7,14 +7,13 @@ module.exports = async (client, queue, song) => {
     if (queue?.textChannel) {
       const embed = new EmbedBuilder()
       .setAuthor({
-        name: 'Currently playing a Track',
+        name: 'Сейчас играет Ваш трек!',
         iconURL: 'https://cdn.discordapp.com/attachments/1140841446228897932/1144671132948103208/giphy.gif', 
-        url: 'https://discord.gg/FUEHs7RCqz'
     })
-    .setDescription(`\n ‎ \n▶️ **Details :** **${song?.name}**\n▶️ **Enjoy the Ultimate Music Experience. ** \n▶️ **If link breaks playback try to give query.**`)
+    .setDescription(`\n ‎ \n ➡ **Детали :** **${song?.name}**\n➤ **Наслаждайтесь музыкой!. ** \n▶➡ **Если ссылка прерывает воспроизведение, попробуйте отправить запрос заново.**`)
 .setImage(queue.songs[0].thumbnail)
     .setColor('#FF0000')
-    .setFooter({ text: 'More info - Use /help command [GlaceYT]' });
+    .setFooter({ text: 'Больше информации - команда /help' });
      
       queue?.textChannel?.send({ embeds: [embed] }).catch(e => { });
     }
