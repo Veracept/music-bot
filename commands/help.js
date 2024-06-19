@@ -1,23 +1,4 @@
-/*
 
-  ________.__                        _____.___.___________
- /  _____/|  | _____    ____  ____   \__  |   |\__    ___/
-/   \  ___|  | \__  \ _/ ___\/ __ \   /   |   |  |    |   
-\    \_\  \  |__/ __ \\  \__\  ___/   \____   |  |    |   
- \______  /____(____  /\___  >___  >  / ______|  |____|   
-        \/          \/     \/    \/   \/                  
-
-╔════════════════════════════════════════════════════════════════════════╗
-║                                                                        ║
-║  ## Created by GlaceYT!                                                ║
-║  ## Feel free to utilize any portion of the code                       ║
-║  ## DISCORD :  https://discord.com/invite/xQF9f9yUEM                   ║
-║  ## YouTube : https://www.youtube.com/@GlaceYt                         ║
-║                                                                        ║
-╚════════════════════════════════════════════════════════════════════════╝
-
-
-*/
 const { ApplicationCommandOptionType } = require('discord.js');
 const db = require("../mongoDB");
 
@@ -26,7 +7,7 @@ const { ButtonStyle } = require('discord.js');
 
 module.exports = {
   name: "help",
-  description: "Get information about bot and commands.",
+  description: "Получите информацию о боте и командах.",
   permissions: "0x0000000000000800",
   options: [],
 
@@ -36,18 +17,18 @@ module.exports = {
         .setColor(client.config.embedColor)
         .setTitle('🎸 **Music Commands**')
         .addFields(
-          { name: '🎹 Play', value: 'Stream a song from a given link or text from sources' },
-          { name: '⏹️ Stop', value: 'Makes the bot stop playing music and leave the voice' },
-          { name: '📊 Queue', value: 'View and manage the song queue of this server' },
-          { name: '⏭️ Skip', value: 'Skip the current playing song' },
-          { name: '⏸️ Pause', value: 'Pause the currently playing song' },
-          { name: '▶️ Resume', value: 'Resume the current paused song' },
-          { name: '🔁 Loop', value: 'Toggle loop mode for queue and current song' },
-          { name: '🔄 Autoplay', value: 'Enable or disable autoplay [play random songs ]' },
-          { name: '⏩ Seek', value: 'Seek to a specific time in the current song' },
-          { name: '⏮️ Previous', value: 'Play the previous song in the queue' },
-          { name: '🔀 Shuffle', value: 'Shuffle the songs in queue' },
-          { name: '📃 playlist', value: 'manage the playlists' }
+           { name: '🎹 Play', value: 'Проигрывать песню по ссылке или тексту из источников' },
+        { name: '⏹️ Stop', value: 'Остановить воспроизведение музыки и выйти из голосового канала' },
+        { name: '📊 Queue', value: 'Просмотр и управление очередью песен на этом сервере' },
+        { name: '⏭️ Skip', value: 'Пропустить текущую воспроизводимую песню' },
+        { name: '⏸️ Pause', value: 'Поставить текущую песню на паузу' },
+        { name: '▶️ Resume', value: 'Возобновить текущую приостановленную песню' },
+        { name: '🔁 Loop', value: 'Переключить режим повторения для очереди и текущей песни' },
+        { name: '🔄 Autoplay', value: 'Включить или отключить автопроигрывание [воспроизведение случайных песен]' },
+        { name: '⏩ Seek', value: 'Перемотать на определенное время в текущей песне' },
+        { name: '⏮️ Previous', value: 'Воспроизвести предыдущую песню в очереди' },
+        { name: '🔀 Shuffle', value: 'Перемешать песни в очереди' },
+        { name: '📃 Playlist', value: 'Управлять плейлистами' }
         )
         .setImage(`https://cdn.discordapp.com/attachments/1004341381784944703/1165201249331855380/RainbowLine.gif?ex=654f37ba&is=653cc2ba&hm=648a2e070fab36155f4171962e9c3bcef94857aca3987a181634837231500177&`); 
 
@@ -55,12 +36,12 @@ module.exports = {
         .setColor(client.config.embedColor)
         .setTitle('✨ **Basic Commands**')
         .addFields(
-          { name: '🏓 Ping', value: "Check the bot's latency" },
-          { name: '🗑️ Clear', value: 'Clear the song queue of this server' },
-          { name: '⏱️ Time', value: 'Display the current song playback time' },
-          { name: '🎧 Filter', value: 'Apply filters to enhance the sound as you love' },
-           { name: '🎵 Now Playing', value: 'Display the currently playing song information' },
-          { name: '🔊 Volume', value: 'Adjust the music volume [ hearing at high volumes is risky ]' },
+        { name: '🏓 Ping', value: 'Проверить задержку бота' },
+        { name: '🗑️ Clear', value: 'Очистить очередь песен на этом сервере' },
+        { name: '⏱️ Time', value: 'Показать текущее время воспроизведения песни' },
+        { name: '🎧 Filter', value: 'Применить фильтры для улучшения звука по вашему вкусу' },
+        { name: '🎵 Now Playing', value: 'Показать информацию о текущей воспроизводимой песне' },
+        { name: '🔊 Volume', value: 'Регулировать громкость музыки [прослушивание на высокой громкости рискованно]' }
         ) 
        .setImage('https://cdn.discordapp.com/attachments/1150827819547504741/1168917372267151370/standard.gif?ex=65538222&is=65410d22&hm=b4994392f44679da41fc9304eb69deaa3769e136057556deec0db69ae8d33a97&')
       const button1 = new ButtonBuilder()
@@ -68,18 +49,8 @@ module.exports = {
         .setURL('https://www.youtube.com/channel/UCPbAvYWBgnYhliJa1BIrv0A')
         .setStyle(ButtonStyle.Link);
 
-      const button2 = new ButtonBuilder()
-        .setLabel('Discord')
-        .setURL('https://discord.gg/FUEHs7RCqz')
-        .setStyle(ButtonStyle.Link);
-
-      const button3 = new ButtonBuilder()
-        .setLabel('Code')
-        .setURL('https://github.com/GlaceYT/MUSIC-BOT-v3.6')
-        .setStyle(ButtonStyle.Link);
-
       const row = new ActionRowBuilder()
-        .addComponents(button1, button2, button3);
+        .addComponents(button1);
 
       interaction.reply({
         embeds: [musicCommandsEmbed, basicCommandsEmbed],
@@ -91,23 +62,4 @@ module.exports = {
   },
 };
 
-/*
 
-  ________.__                        _____.___.___________
- /  _____/|  | _____    ____  ____   \__  |   |\__    ___/
-/   \  ___|  | \__  \ _/ ___\/ __ \   /   |   |  |    |   
-\    \_\  \  |__/ __ \\  \__\  ___/   \____   |  |    |   
- \______  /____(____  /\___  >___  >  / ______|  |____|   
-        \/          \/     \/    \/   \/                  
-
-╔════════════════════════════════════════════════════════════════════════╗
-║                                                                        ║
-║  ## Created by GlaceYT!                                                ║
-║  ## Feel free to utilize any portion of the code                       ║
-║  ## DISCORD :  https://discord.com/invite/xQF9f9yUEM                   ║
-║  ## YouTube : https://www.youtube.com/@GlaceYt                         ║
-║                                                                        ║
-╚════════════════════════════════════════════════════════════════════════╝
-
-
-*/
