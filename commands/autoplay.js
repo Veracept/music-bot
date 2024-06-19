@@ -31,7 +31,7 @@ module.exports = {
     try {
       const queue = client?.player?.getQueue(interaction?.guild?.id);
       if (!queue || !queue?.playing) {
-        return interaction?.reply({ content: '⚠️ No music playing!!', ephemeral: true });
+        return interaction?.reply({ content: '⚠️ Музыка не играет!!', ephemeral: true });
       }
       
       queue?.toggleAutoplay();
@@ -39,7 +39,7 @@ module.exports = {
       const embed = new EmbedBuilder()
         .setColor('#2f58fe')
         .setTitle('Your Music, Your Call!!')
-        .setDescription(queue?.autoplay ? '**✅ Autoplay ON**' : '**❌ Autoplay OFF**')
+        .setDescription(queue?.autoplay ? '**✅ Автовоспроизведение ВКЛ**' : '**❌ Автовоспроизведение ВЫКЛ.**')
         
       
       interaction?.reply({ embeds: [embed] });
