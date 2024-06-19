@@ -7,7 +7,7 @@ module.exports = {
   mongodbURL: "mongodb+srv://shiva:shiva@musicbotyt.ouljywv.mongodb.net/?retryWrites=true&w=majority",
   status: 'GlaceYT',
   commandsDir: './commands',
-  language: "en",
+  language: "ru",
   embedColor: "00fbff",
   errorLog: "",
 
