@@ -3,7 +3,7 @@ const db = require('../mongoDB');
 
 module.exports = {
   name: "playlist",
-  description: "Lets you manage Album commands.",
+  description: "Позволяет управлять командами плейлиста.",
   options: [
     {
       name: "create",
