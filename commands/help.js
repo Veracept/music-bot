@@ -44,13 +44,7 @@ module.exports = {
         { name: '🔊 Volume', value: 'Регулировать громкость музыки [прослушивание на высокой громкости рискованно]' }
         ) 
        .setImage('https://repository-images.githubusercontent.com/308071706/99d92580-5e7d-11eb-9c84-d97c45f41e74')
-      const button1 = new ButtonBuilder()
-        .setLabel('YouTube')
-        .setURL('https://www.youtube.com/channel/UCPbAvYWBgnYhliJa1BIrv0A')
-        .setStyle(ButtonStyle.Link);
-
-      const row = new ActionRowBuilder()
-        .addComponents(button1);
+     
 
       interaction.reply({
         embeds: [musicCommandsEmbed, basicCommandsEmbed],
